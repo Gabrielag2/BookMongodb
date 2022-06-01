@@ -1,0 +1,38 @@
+{{> header}}
+
+<table border="6">
+    <thead>
+
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Direccion</th>
+        <th>Ciudad</th>
+        <th>Estado</th>
+        <th>Codigo Postal</th>
+        <th>Localización</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.patronid}}</td>
+                <td>{{this.nombre}}</td>
+                <td>{{this.apellido}}</td>
+                <td>{{this.direccion}}</td>
+                <td>{{this.ciudad}}</td>
+                <td>{{this.estado}}</td>
+                <td>{{this.codigoPostal}}</td>
+                <td>{{this.Localizacion}}</td>
+
+                <td>
+                    <a href="/brand/clients/{{this._id}}">Edit</a>
+                    <a href="/brand/delete/clients/{{this._id}}"
+                    onclick="return confirm('Desea eliminar el registro?');">
+                    Delete
+                    </a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

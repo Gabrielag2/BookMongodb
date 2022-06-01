@@ -1,0 +1,25 @@
+{{> header}}
+<body  class="p-3 mb-1 bg-info">
+    
+
+ <center> 
+<h2>{{viewTitle}}</h2>
+
+<form action="/brand" method="POST">
+    <input type="hidden" name="_id" value="{{brand._id}}" />
+    
+    Id
+    <input type="text" name="id" style="width: 500px;" class="form-control is-valid" required placeholder="Ingrese el Id"  value="{{brand.id}}"><br />
+    Titulo
+    <input type="text" name="title" style="width: 500px;" class="form-control is-valid" required placeholder="Ingrese el titulo"  value="{{brand.title}}"><br />
+    Apellido
+    <input type="text" name="apellido" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el apellido del Autor" value="{{brand.apellido}}"><br />
+    Nombre
+    <input type="text" name="nombre" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el nombre del Autor" value="{{brand.nombre}}"><br />
+    Clasificacion
+    <input type="number" name="clasificacion" style="width: 500px" class="form-control is-valid" placeholder="Registre la clasificacion" required value="{{brand.clasificacion}}"  ><br />
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+ </center> 
+</body> 

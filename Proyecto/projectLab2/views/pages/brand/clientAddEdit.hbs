@@ -1,0 +1,54 @@
+{{> header}}
+<body  class="p-3 mb-1 bg-info">
+    
+
+ <center> 
+<h2>{{viewTitle}}</h2>
+<div class="content">
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>        
+        <div class="col-md-4">
+            <form action="/client" method="POST">
+            <div class="mb-3">
+            <input type="hidden" class="form-control" name="_id" value="{{client._id}}">
+            </div>
+            <div class="mb-3">
+            Id
+            <input type="text"   name="patronid" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el id"  value="{{client.patronid}}">
+            </div>
+            <div class="mb-3">
+            Nombre
+            <input type="text"   name="nombre" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el nombre"  value="{{client.nombre}}">
+            </div>
+            <div class="mb-3">
+            Apellido
+            <input type="text"  name="apellido" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el apellido"  value="{{client.apellido}}">
+            </div>
+            <div class="mb-3">
+            Direccion
+            <input type="text"  name="direccion" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese la direccion"  value="{{client.direccion}}">
+            </div>
+             <div class="mb-3">
+            Ciudad
+            <input type="text" name="ciudad" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese la ciudad"  value="{{client.ciudad}}">
+            </div>
+            <div class="mb-3">
+            Estado
+            <input type="text" name="estado" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el estado"  value="{{client.estado}}">
+            </div>
+            <div class="mb-3">
+            Codigo Postal
+            <input type="text"  name="codigoPostal" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese el codigo postal"  value="{{client.codigoPostal}}">
+            </div>
+             <div class="mb-3">
+            Localizacion
+            <input type="text" name="localizacion" style="width: 500px" class="form-control is-valid" required placeholder="Ingrese su localidad"  value="{{client.localizacion}}">
+            </div>
+            <button type="submit" class="btn btn-success"  >Guardar</button>
+        </form>
+        </div>
+    </div>
+</div>
+</center> 
+</body> 

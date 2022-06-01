@@ -1,0 +1,36 @@
+{{> header}}
+<body class="p-3 mb-1 bg-info"> 
+<center>  
+<h2>{{viewTitle}}</h2>
+<table class="table table-success table-sm table-bordered border-primary" style="width: 1000px; text-align:center;" >
+
+    <thead>
+
+        <th>Id</th>
+        <th>Titulo</th>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Clasificacion</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.apellido}}</td>
+                <td>{{this.nombre}}</td>
+                <td>{{this.clasificacion}}</td>
+                <td>
+                   <button class="btn btn-warning" > <a href="/brand/{{this._id}}">Editar</a> </button>
+                   <button class="btn btn-danger" > <a href="/brand/delete/{{this._id}}"
+                    onclick="return confirm('Desea eliminar el registro?');">
+                    Eliminar
+                    </a></button>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</center> 
+</body>
